@@ -1,0 +1,129 @@
+table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #9b7d7e;
+    border-inline-width: revert;
+
+}
+
+table.table-striped tbody tr:nth-of-type(even) {
+    background-color: #dec0c0;
+    border-inline-width: revert;
+}
+/* Adjust font size for table cells */
+table.table-bordered td,
+table.table-bordered th {
+    font-size: 20px; /* Adjust the value as needed */
+
+
+}
+
+/* Reduce padding for table cells */
+table.table-bordered td,
+table.table-bordered th {
+    padding: 7px 13px; /* Adjust the padding values as needed */
+
+}
+
+/* Reduce line height for table cells */
+table.table-bordered td,
+table.table-bordered th {
+    line-height:  2.2; /* Adjust the line height as needed */
+    border-inline-width: initial;
+}
+
+
+h1 {
+    text-align: center;
+    color: #004c6c;
+}
+
+.button-placeholder {
+    height: 30px;
+}
+
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-form {
+    display: flex;
+    align-items: center;
+}
+
+.filter-form label {
+    margin-right: 99px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-right: 127px;
+}
+
+.form-control{
+    width: 275px;
+    display: initial;
+    margin-top: 5px;
+}
+
+.filter-form select {
+    width: 270px;
+    margin-right: 10px;
+}
+
+.filter-form button {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+
+
+.table-bordered > :not(caption) > * > * {
+    border-width: 6px var(--bs-border-width);
+}
+
+.reset-filter-button {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+    width: 94px;
+}
+
+.reset-filter-button:hover {
+    background-color: #545b62;
+    border-color: #4e555b;
+}
+
+.filter-form label {
+    margin-right: 15px; /* Adjusted for better spacing */
+    font-weight: bold;
+    font-size: 18px; /* Adjusted for better readability */
+}
+
+.filter-form select {
+    width: 200px; /* Adjusted for a more compact dropdown */
+    margin-right: 15px; /* Adjusted for better spacing */
+    padding: 8px; /* Adjusted for better appearance */
+}
+
+.filter-form button {
+    font-size: 16px; /* Adjusted for better visibility */
+    padding: 8px 12px; /* Adjusted for better appearance */
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Added for a more rounded appearance */
+}
+
+.filter-form button:hover {
+    background-color: #23272b;
+}

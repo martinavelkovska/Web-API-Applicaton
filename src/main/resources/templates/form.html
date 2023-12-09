@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>WP Exam</title>
+    <link href="/form.css" rel="stylesheet">
+
+</head>
+<body>
+<!-- The form should submit to ProductsController.create or  ProductsController.update, depending on whether we are
+creating or editing a product -->
+<form th:method="post" th:action="@{${contact != null} ? '/contacts/' + ${contact.id} : '/contacts'}">
+    <div>
+        <label for="name">Name</label>
+        <input type="text"
+               id="name"
+               name="name" th:value="${contact?.getName()}"
+               required>
+    </div>
+
+    <div class="custom-dropdown">
+        <label>Select Company:</label><br/>
+        <select id="company" name="company"  size="1">
+            <!-- For each party you should have one <option> like below  -->
+            <option th:each="c: ${companies}" th:value="${c?.getId()}" th:text="${c?.getName()}"  th:selected="${contact!=null ? contact.getCompany().equals(c) : null}"> [company.name]</option>
+        </select>
+    </div>
+
+    <div class="select-dropdown">
+        <label>Select Country:</label><br/>
+        <select id="country" name="country" size="1" class="dropdown">
+            <!-- For each party you should have one <option> like below  -->
+            <option th:each="country: ${countries}" th:value="${country?.getId()}" th:text="${country?.getName()}" th:selected="${contact!=null ? contact.getCountry().equals(country) : null}">[country.name]</option>
+        </select>
+    </div>
+    <button id="submit" type="submit" class="btn btn-success">Submit</button>
+    <a id="back" href="/contacts" type="button" class="btn btn-primary">Back to contacts</a>
+</form>
+
+
+</body>
+</html>

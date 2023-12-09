@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>WP Exam</title>
+    <link href="/form.css" rel="stylesheet">
+
+</head>
+<body>
+
+<form th:method="post" th:action="@{${country != null} ? '/countries/' + ${country?.id} + '/edit' : '/countries/add'}">
+
+    <div>
+        <label for="name">Name</label>
+        <input type="text"
+               id="name"
+               name="name" th:value="${country?.getName()}"
+               required>
+    </div>
+
+    <button id="submit" type="submit" class="btn btn-success">Submit</button>
+    <a id="back" href="/countries" type="button" class="btn btn-primary">Back to countries</a>
+</form>
+
+</body>
+</html>
